@@ -24,9 +24,9 @@ public void init() throws Exception {
             System.out.println("Poort geopenend");
             Thread.sleep(5000);
             OutputStream out = port.getOutputStream();
-            out.write("LED_ON\n".getBytes());
+            out.write("GeefNaam\n".getBytes());
             out.flush();
-            System.out.println("Java-Service geeft instructie");
+            System.out.println("Java-Service vraag naam");
             BufferedReader reader = new BufferedReader(new InputStreamReader(port.getInputStream()));
             String response = reader.readLine();
             System.out.println("Arduino antwoordt: " + response);
